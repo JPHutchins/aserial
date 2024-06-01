@@ -1,9 +1,9 @@
 [project]
 name = "aserial"
 version = "0.1.0"
-description = "Add your description here"
+description = "Python asyncio serial library"
 authors = [
-    { name = "J.P. Hutchins", email = "jphutchins@gmail.com" }
+    { name = "JP Hutchins", email = "jphutchins@gmail.com" }
 ]
 dependencies = []
 readme = "README.md"
