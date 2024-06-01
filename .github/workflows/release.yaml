@@ -15,13 +15,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - run: pipx install poetry
-
-    - uses: actions/setup-python@v5
+    - name: Setup rye
+      id: setup-rye
+      uses: eifinger/setup-rye@v3
       with:
-        python-version: "3.x"
+        enable-cache: true
 
-    - run: rye sync
+    - if: steps.setup-rye.outputs.cache-hit != 'true'
+      run: rye sync
 
     - run: rye build
 
